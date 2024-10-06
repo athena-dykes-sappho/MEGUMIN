@@ -1,0 +1,428 @@
+/* =========================================================================== */
+
+/*  -- HTML DOCUMENT --  */
+
+/* =========================================================================== */
+
+@font-face {
+    font-family: 'Jujutsu-Kaisen';
+    src: url(../FNTS/Jujutsu-Kaisen.ttf);
+}
+
+* {
+    margin:  0;
+    padding: 0;
+
+    box-sizing:        border-box;
+    font-family: 'Jujutsu-Kaisen';
+
+    font-size: 18px;
+    transition: .2s;
+}
+
+/* --------------------------------------------------------------------------- */
+
+
+
+
+
+
+/* =========================================================================== */
+
+/*  -- CLASSES --  */
+
+/* =========================================================================== */
+
+.container {
+    display: flex;
+
+    align-items:     center;
+    justify-content: center;
+}
+
+.row {  
+    flex-direction: row !important;
+}
+
+.col {
+    flex-direction: column !important;
+}
+
+.buttons {
+    margin-top: 15px;
+}
+
+.card {
+    padding: 20px;
+    margin:   5vh;
+
+    border-radius: 8px;
+    
+    background-color:           var(--color-black);
+    box-shadow: 0px 0px 10px    var(--color-box-shadow-card);
+}
+
+/* --------------------------------------------------------------------------- */
+
+
+
+
+
+
+/* =========================================================================== */
+
+/*  -- HTML EMELENTS --  */
+
+/* =========================================================================== */
+
+body {
+    background-color:   var(--color-grey);
+    color:              var(--color-txt-white);
+
+    letter-spacing: 2px;
+}
+
+button {
+    cursor: pointer;
+
+    border-radius: 4px;
+    border: none;
+
+    width: 120px;
+    height: 38px;
+
+    color: var(--color-txt-white);
+}
+
+a {
+    color: var(--color-link-plain);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-link-hover);
+}
+
+/* --------------------------------------------------------------------------- */
+
+
+
+
+
+
+/* =========================================================================== */
+
+/*  -- HEADER --  */
+
+/* =========================================================================== */
+
+/* MOS: É aqui onde a putaria toda tá ocorrendo, me helpa, PFV o(TヘTo) */
+
+header {
+    z-index: 3;
+
+    background-color:   var(--color-black);
+    color:              var(--color-txt-white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px 20px;
+    width: 100%;
+    height: 90px;
+}
+
+/* --------------------------------------------------------------------------- */
+
+/* - Classes - */
+
+.item {
+    margin: 5px;
+}
+
+/* MOS: We know that some vars may be totally useless for their being used in a single instance, but we're just testing stuff out, ok ? :< */
+
+/* LUZ: It's okay, honey :3 it's already a training for using variables for standard sets */
+
+.theme {
+    background-color: var(--color-grey);
+    border-radius: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0px 8px 0px 0px; /* top left bottom right */
+    width: 40px;
+}
+
+.theme:hover {
+    background-color: var(--color-white3);
+    color: var(--color-txt-black);
+}
+
+.theme img {
+    height: var(--size-theme-height);
+}
+
+/* --------------------------------------------------------------------------- */
+
+/* - IDs - */
+
+#logo {
+    display: flex;
+}
+
+/* PET HIM PET HIM PET HIM PET HIM PET HIM PET HIM PET HIM PET HIM PET HIM PE- */
+
+#logo img {
+    height: var(--size-logo-height);
+
+    cursor: grab;
+}
+
+#logo img:active {
+    transform: scale(1.15);
+
+    cursor: grabbing;
+}
+
+/* PET HIM PET HIM PET HIM PET HIM PET HIM PET HIM PET HIM PET HIM PET HIM PE- */
+
+.heart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    fill: var(--color-white1);
+    cursor: none;
+
+    position: absolute;
+
+    margin-right: 500px;
+}
+
+.heart-to-right { animation: heartMove 3.2s ease-in-out 0s infinite normal forwards; }
+
+.heart-to-left { animation: heartMoveToLeft 3.2s ease-in-out 0s infinite normal forwards; }
+
+/* --------------------------------------------------------------------------- */
+
+
+
+
+
+
+/* =========================================================================== */
+
+/* -- MAIN -- */
+
+/* =========================================================================== */
+
+/* --------------------------------------------------------------------------- */
+
+/* - Classes - */
+
+.main-items {
+    /* background-color: var(--color-white3); */
+    padding: 5vh 1vh 0 1vh;
+
+    flex-direction: column;
+
+    /* box-shadow: 0px 0px 30px 0px var(--color-black); // horizontal, vertical, blur, size */
+}
+
+/* --------------------------------------------------------------------------- */
+
+/* - Buttons - */
+
+div.image-megumin {
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    z-index: -1;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    width: 50%;
+    height: 70%;
+
+    animation: appearMegumi .5s ease-in-out 0s;
+}
+
+.image-meguna {
+    right: 0;
+    left: initial !important;
+
+    animation: appearMeguna .5s ease-in-out 0s !important;
+
+}
+
+
+/* --------------------------------------------------------------------------- */
+
+/* - Forms - */
+
+form {
+    font-size: 20px;
+}
+
+form > div.card.container {
+    min-width: 300px;
+}
+
+
+/* --------------------------------------------------------------------------- */
+
+/* - Inputs and Labels - */
+
+label {
+    margin: 8px 0 8px 0;
+}
+
+input, textarea, select {
+    border: 2px solid rgb(164, 172, 182);
+    border-radius: 4px;
+    outline: none;
+
+    padding: 9px 4px;
+    width: 210px;
+}
+
+input[type="file"] {
+    font-size: 12px;
+}
+
+textarea /* [name="input-text"] */ {
+    box-sizing: border-box;
+    resize: none;
+
+    height: 120px;
+
+    word-break: break-all;
+}
+
+fieldset {
+    margin: 5px 0px;
+}
+
+img#image-preview{
+    background-color: var(--color-black);
+
+    width:  var(--size-image-preview);
+    height: var(--size-image-preview);
+
+    margin: 0px 0px 10px 0px;
+}
+
+div#image-preview-d {
+    margin: 10px 0px;
+}
+
+p#title {
+    font-size: 30px;
+}
+
+/* --------------------------------------------------------------------------- */
+
+/* - Buttons - */
+
+#submit-btn, #send-btn {
+    background-color: var(--color-blue1);
+}
+#submit-btn:hover, #send-btn:hover {
+    background-color: var(--color-blue3);
+}
+#erase-btn, #receive-btn {
+    background-color: var(--color-purple1);
+}
+#erase-btn:hover, #receive-btn:hover {
+    background-color: var(--color-purple2);
+}
+
+/* =========================================================================== */
+
+/* -- SERVICOS -- */
+
+/* =========================================================================== */
+
+/* --------------------------------------------------------------------------- */
+
+/* - Main - */
+
+.info {
+    background-color: var(--color-grey);
+    padding: 8px;
+    border: solid 3px var(--color-white3);
+    border-radius: 8px;
+}
+
+/* --------------------------------------------------------------------------- */
+
+/* - Product Card - */
+
+div.product-card {
+    justify-content: space-around !important;
+    width: 400px;
+    height: 500px;
+}
+
+div.product-card .row {
+    margin: 10px 0px;
+}
+
+/* --------------------------------------------------------------------------- */
+
+/* - Product Info - */
+
+div.col#product-image {
+    width: 40%;
+    height: 100%;
+    padding: 1vh;
+
+}
+
+img.product-info {
+    width: 100%;
+    max-height: 200px;
+
+    background-color: var(--color-white3);
+    border-radius: 8px;
+}
+
+h2.product-info {
+    font-size: 20px;
+    text-align: center;
+
+    background-color: var(--color-grey);
+    padding: 8px;
+    border-radius: 8px;
+}
+
+
+textarea.product-info {
+    background-color: inherit;
+    color: inherit;
+    border: none;
+}
+
+/* =========================================================================== */
+
+/* -- FOOTER -- */
+
+/* =========================================================================== */
+
+/* --------------------------------------------------------------------------- */
+
+/* - Classes - */
+
+/* --------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------- */
+
+/* - IDs - */
+
+/* --------------------------------------------------------------------------- */

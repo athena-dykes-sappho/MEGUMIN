@@ -1,0 +1,62 @@
+table {
+    background-color: var(--color-white1);
+
+    width: 100%;
+}
+
+#tb-produtos, #tb-usuarios {
+    margin: 60px 0px !important;
+}
+
+thead {
+    background-color: var(--color-purple3);
+}
+
+table th:first-child {
+    width: 6%;
+}
+
+table th:nth-child(2) {
+    width: 12%;
+}
+
+th, td {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+tbody tr {
+    background-color: var(--color-purple2);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--color-purple1);
+}
+
+button.table-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    width: 20px;
+    padding: 0px 30px;
+    background: none;
+    border: none;
+}
+
+button.table-btn#del img {
+    width: calc(var(--size-table-svg)*1.7);
+}
+
+button.table-btn img {
+    width: var(--size-table-svg);
+
+    filter: invert(200%);
+}
+
+tfoot {
+    color: var(--color-blue4);
+}
+
+tfoot img {
+    filter: none !important;
+}
